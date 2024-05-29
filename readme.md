@@ -14,3 +14,4 @@ To create the docker image of it use the command "docker compose up",and to run 
 
 Make sure all the necessary modules are installed ,so before using anything make sure the virtual environment is created and activated and requirements.txt is installed.
 
+Also to make api testing easy,thunderclient collections are added,so you need to install thunder client extension in vs code and export the collection there,it also can be done via postman.
