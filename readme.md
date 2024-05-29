@@ -1,4 +1,6 @@
-This is a FastApi project which handles product inventory.It also has authentication apis inside it and all the product related apis are jwt authenticated.The necessary concepts which are used in this such as schemas,routers,databases etc are all seperated by their respective folder and everything is imported to their own respective python files,outside the folders,in the root.
+This is a FastApi project which handles product inventory.The necessary concepts which are used in this such as schemas,routers,databases etc are all seperated by their respective folder and everything is imported to their own respective python files,outside the folders,in the root.
+
+It also has proper authentication system,register and login apis and all the product related api endpoints are jwt protected.
 
 For instance all schemas are divided into specific names inside defined_schemas folder,inside that folder we have python files which contains the schemas,and then they are imported into the root schemas.py file,to ensure lucidity and best production practices such that whenever we need to import the schemas anywhere we can take it from schemas.py file,and whenever we need to edit we have to go the folder and the respective python files such that we dont get lost while editing.
 
