@@ -8,15 +8,12 @@ services:
       - "80:80"
     depends_on:
       - postgres
-      # - mongodb
     environment:
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=5432
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=mydatabase
-      # - MONGO_HOST=${MONGO_HOST}
-      # - MONGO_PORT=${MONGO_PORT}
     volumes:
       - .:/app
     networks:
@@ -36,19 +33,8 @@ services:
     networks:
       - dockernetwork
 
-  # mongodb:
-  #   image: mongo:4.4
-  #   container_name: mongodb
-  #   environment:
-  #     - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-  #     - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-  #   ports:
-  #     - "${MONGO_PORT}:${MONGO_PORT}"
-  #   volumes:
-  #     - mongo_data:/data/db
 
 volumes:
   postgres_data:
-  # mongo_data:
 networks:
   dockernetwork:
